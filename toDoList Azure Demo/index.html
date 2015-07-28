@@ -1,16 +1,45 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset="utf-8" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
 
+</head>
+<body>
+    <!--Show the list of ToDoItems-->
+    <div data-role="view" data-title="Intro" id="Intro">
+        <h1>Hola Mundo Again</h1>
+    </div>
+
+    <!--Layout-->
+    <div data-role="layout" data-id="tabstrip-layout">
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" id="onlineStatusButton" data-icon="downloads" data-click="app.azureDataService.saveViewforOffline" data-align="left">Offline</a>
+
+                <!--<a href="views/createToDo.html" data-role="button" data-icon="add" data-align="right">New</a>
+                <a data-role="button" id="onlineStatusButton" data-icon="downloads" data-ng-click="app.azureService.saveViewforOffline" data-align="left">Offline</a>-->
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a href="#Intro" data-icon="home">Home</a>
+                <a href="views/showAllToDos.html" data-icon="info">All</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Add a new ToDo-->
+
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
-    
-</head>
-<body>
-    
+    <script src="scripts/app.js"></script>
+    <script src="scripts/showAllToDos.js"></script>
 </body>
 </html>
